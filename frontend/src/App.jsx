@@ -11,7 +11,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  const API_URL = "http://localhost:3001/tasks";
+  const API_URL = "https://tffs-j88k.onrender.com/tasks";
 
   async function fetchTasks() {
     try {
