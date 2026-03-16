@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-dark: #07111f;
+  --overlay: rgba(3, 7, 18, 0.72);
+  --card: rgba(15, 23, 42, 0.78);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --text-main: #f8fafc;
+  --text-soft: #cbd5e1;
+  --accent: #caa24d;
+  --accent-hover: #e0b85c;
+  --danger: #dc2626;
+  --success: #22c55e;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-main);
+  background:
+    linear-gradient(var(--overlay), var(--overlay)),
+    url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1600&q=80")
+      center/cover no-repeat fixed;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 760px;
+  background: var(--card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.header {
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: var(--text-soft);
+  line-height: 1.6;
+  max-width: 560px;
+}
+
+.task-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.task-form input,
+.edit-area input {
+  flex: 1;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-main);
+}
+
+.task-form input::placeholder,
+.edit-area input::placeholder {
+  color: #94a3b8;
+}
+
+.task-form button,
+.actions button,
+.edit-area button {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.task-form button {
+  background: var(--accent);
+  color: #111827;
+}
+
+.task-form button:hover {
+  background: var(--accent-hover);
+}
+
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.task-item span {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+.actions,
+.edit-area {
+  display: flex;
+  gap: 8px;
+}
+
+.actions button:first-child,
+.edit-area button:first-of-type {
+  background: #1d4ed8;
+  color: white;
+}
+
+.actions button:first-child:hover,
+.edit-area button:first-of-type:hover {
+  filter: brightness(1.08);
+}
+
+.actions button:last-child,
+.edit-area button:last-child {
+  background: var(--danger);
+  color: white;
+}
+
+.actions button:last-child:hover,
+.edit-area button:last-child:hover {
+  filter: brightness(1.08);
+}
+
+.empty {
+  text-align: center;
+  padding: 28px;
+  color: var(--text-soft);
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .task-form,
+  .task-item,
+  .edit-area {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .actions button,
+  .edit-area button,
+  .task-form button {
+    width: 100%;
+  }
+}.info-message,
+.error-message {
+  text-align: center;
+  padding: 16px;
+  border-radius: 12px;
+  margin-top: 12px;
+}
+
+.info-message {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-soft);
+}
+
+.error-message {
+  background: rgba(220, 38, 38, 0.12);
+  color: #fecaca;
+  border: 1px solid rgba(220, 38, 38, 0.3);
+}.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  margin-bottom: 6px;
+}
+
+.stat-card strong {
+  font-size: 1.4rem;
+  color: var(--text-main);
+}
+
+@media (max-width: 640px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
