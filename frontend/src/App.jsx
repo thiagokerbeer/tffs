@@ -121,7 +121,7 @@ function App() {
     <main className="app">
       <div className="container">
         <header className="header">
-          <p className="eyebrow">Projeto 2 • Full Stack Task Manager</p>
+          <p className="eyebrow">TFFS</p>
           <h1>Controle de Tarefas</h1>
           <p className="subtitle">
             Organize, acompanhe e conclua suas tarefas em uma interface moderna
