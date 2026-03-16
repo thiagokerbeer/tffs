@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js"
+  "dev": "nodemon server.js",
+  "start": "node server.js",
+  "postinstall": "prisma generate"
+}
   },
   "dependencies": {
     "@prisma/adapter-better-sqlite3": "^7.5.0",
