@@ -64,6 +64,11 @@ integração entre frontend e backend
 
 banco de dados com Prisma
 
-Projeto concluído localmente e em preparação para publicação no GitHub.
+Projeto Projeto concluído e publicado online.
 
 Desenvolvido por Thiago.
+
+## Link do projeto
+
+Frontend: https://tffs.vercel.app/
+Backend: https://tffs-j88k.onrender.com
